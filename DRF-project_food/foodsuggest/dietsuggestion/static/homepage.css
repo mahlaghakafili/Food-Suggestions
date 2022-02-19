@@ -1,0 +1,46 @@
+  img {
+  width: 200px;
+  border-radius: 100px;
+  float: left;
+  margin-right: 10px;
+  }
+  .name {
+  font-weight: bold;
+  font-style: italic;
+  }
+  .header {
+  background-color: #79bfa1;
+  padding: 20px;
+  text-align: center;
+  font-size: x-large;
+  }
+  .footer {
+  text-align: center;
+  border-style: double;
+  border-color: #bdd99e;
+  border-width: medium;
+  border-radius: 5px;
+  }
+  .footer2 {
+  text-align: center;
+  border-width: medium;
+  }
+  .column {
+  float: left;
+  padding: 10px;
+  text-align: center;
+  }
+  .column.side {
+  width: 25%;
+  text-align: center;
+  font-size: large;
+  font-weight: 900;
+  font-style: oblique;
+  }
+  .column.middle {
+  width: 50%;
+  text-align: center;
+  font-size: large;
+  font-weight: 3000;
+  font-style: italic;
+  }

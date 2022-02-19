@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>adminpage</title>
+
+    <link rel="stylesheet" href="/static/diet/style.css" />
+<!--      <script src="/static/diet/sortable.js"></script>-->
+  </head>
+  <body>
+    <div class="tab" style="font-size: normal">
+      <form action="#" method = post>{% csrf_token %}
+          <input  type="Text" name="search_word" placeholder="search here" /> &#128269; </input>
+          <input  type="submit" value="ENTER" name="enter" /> </input>
+      </form>
+      <style>
+          table, th, td {
+            font-size:small;
+            border:1px solid black;
+          }
+      </style>
+      <table class="sortable">{% csrf_token %}
+          <thead>
+              <tr>
+                  <th scope="col" class="sort-by">Username<a href="?order_by=username&direction=asc">&#11015;</a><a href="?order_by=username&direction=desc">&#11014;</a></th>
+                  <th scope="col" class="sort-by">Password<a href="?order_by=password&direction=asc">&#11015;</a><a href="?order_by=password&direction=desc">&#11014;</a></th>
+                  <th scope="col" class="sort-by">Bmi<a href="?order_by=bmi&direction=asc">&#11015;</a><a href="?order_by=bmi&direction=desc">&#11014;</a></th>
+                  <th scope="col" class="sort-by">Name<a href="?order_by=name&direction=asc">&#11015;</a><a href="?order_by=name&direction=desc">&#11014;</a></th>
+                  <th scope="col" class="sort-by">FamilyName<a href="?order_by=fname&direction=asc">&#11015;</a><a href="?order_by=fname&direction=desc">&#11014;</a></th>
+                  <th scope="col" class="sort-by">Email<a href="?order_by=email&direction=asc">&#11015;</a><a href="?order_by=email&direction=desc">&#11014;</a></th>
+                  <th scope="col" class="sort-by">Contact<a href="?order_by=contact&direction=asc">&#11015;</a><a href="?order_by=contact&direction=desc">&#11014;</a></th>
+                  <th scope="col" class="sort-by">Vegtype<a href="?order_by=veg_type&direction=asc">&#11015;</a><a href="?order_by=veg_type&direction=desc">&#11014;</a></th>
+              </tr>
+          </thead>
+          <tbody>
+              {%  for user in result %}
+                  <tr>
+                      <td>{{user.username}}</td>
+                      <td>{{user.password}}</td>
+                      <td>{{user.bmi}}</td>
+                      <td>{{user.name}}</td>
+                      <td>{{user.fname}}</td>
+                      <td>{{user.email}}</td>
+                      <td>{{user.contact}}</td>
+                      <td>{{user.veg_type}}</td>
+                  </tr>
+              {% endfor %}
+          </tbody>
+
+
+    </div>
+  </body>
+</html>
+
+
+
+
+

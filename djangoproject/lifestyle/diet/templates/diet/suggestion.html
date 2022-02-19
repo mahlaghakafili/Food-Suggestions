@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>offer</title>
+    <link rel="stylesheet" href="/static/diet/stylepages.css" />
+  </head>
+  <body>
+    <div class="tab" style="font-size: normal">
+      Dear {{final_result_from_DB.name}}{{final_result_from_DB.fname}},<br></br> Here is our food suggestion for you!<br></br>{{final_result_from_DB.food}}
+      <div style="fon"><br></br>
+        {{final_result_from_DB.phone}}<br><br>{{final_result_from_DB.email}}<br></br></div>
+      enjoy your meal &#127857;
+      <form action="/logout/">{% csrf_token %}
+          <input type="submit" value="logout" /></input>
+      </form>
+      <a href="http://127.0.0.1:8000/lifestyle/">previous</a>
+
+    </div>
+  </body>
+</html>

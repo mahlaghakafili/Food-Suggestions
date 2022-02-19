@@ -1,0 +1,26 @@
+<!-- inja az user email migire ke badan tope comment akharesh bege dear felani inkaro kon-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="/static/diet/stylepages.css" />
+  </head>
+  <body>
+    <div class="tab">
+      <form action="/lifestyle/" method="post">{% csrf_token %}
+          Contact Info:
+          <p>
+            <input type="email" placeholder="E-mail..."  name="email" required />
+          </p>
+          <p>
+            <input type="number" placeholder="Phone..."  name="phone" required/>
+          </p>
+          <input type="submit" value="Next" />
+      </form>
+        <a href=http://127.0.0.1:8000/info/>previous</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/diet/stylepages.css" />
+    <title>Info</title>
+    
+</head>
+<body>
+    <div class="tab">
+    <form action="/contact/" method="post">{% csrf_token %}
+        Name:
+        <p><input placeholder="First name..."  name="name" required/></input></p></p>
+        <p><input placeholder="Last name..."  name="fname" required /></input></p></p>
+
+        <input type="submit" value="Next" />
+    </form>
+    <a href=http://127.0.0.1:8000/result/>previous</a>
+    </div>
+
+
+
+
+    </div>
+</body>
+</html>

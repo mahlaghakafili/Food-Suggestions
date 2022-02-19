@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/stylepages.css" />
+    <title>Result</title>
+  </head>
+  <body class="tab"  >
+    <p>your bmi is {{bmi1}}</p>
+    <p>{{massage1}}</p>
+    <form action="/info/" method="post" >
+      <input type="submit" value="Next" /></input>
+    </form>
+    <form action="/bmi/" method="post">
+          <a href="http://127.0.0.1:5000/bmi/">previous</a>
+    </form>
+  </body>
+</html>
